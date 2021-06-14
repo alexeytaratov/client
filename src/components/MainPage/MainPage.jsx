@@ -17,11 +17,14 @@ const MainPage = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        await axios.get('https://alexfinder.herokuapp.com/api/requests', {
+        // await axios.get('https://alexfinder.herokuapp.com/api/requests', {
+        await axios.get('/api/requests', {
+        // await axios.get('http://localhost:5000/api/requests', {
           headers: { 'Content-Type': 'application/json' }
         })
         .then(response => {
           setRequests(response.data[0]?.heads)
+          console.log('heads', response.data[0]?.heads)
         })
       } catch (error) {
         console.log('error')

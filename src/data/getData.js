@@ -14,10 +14,11 @@ const filterRes = (res = [], str = '') => {
 
 const search = async (data, setParseResult = () => {}, str = '') => {
   try {
-    await axios.post(url, {...data}, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    console.log('data', data);
+    // await axios.post('https://alexfinder.herokuapp.com/api/search', {
+    await axios.post('http://localhost:5000/api/search', {
+      data: {...data},
+      headers: {'Content-Type': 'application/json; charset=UTF-8'}
     })
     .then(response => {
       const result = filterRes(response.data, str);
@@ -55,3 +56,4 @@ export const searchBacking = async (setParseResult, dopAttr, headsBD = {}, setSh
   await search(data, setParseResult, 'подложка');
   setShowSpinner(false);
 }
+

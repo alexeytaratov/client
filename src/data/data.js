@@ -1,5 +1,5 @@
-// export const url = 'http://localhost:5000/search/';
-export const url = 'https://alexfinder.herokuapp.com/search/';
+export const url = 'http://localhost:5000/api/search/';
+// export const url = 'https://alexfinder.herokuapp.com/api/search/';
 
 
 export const heads = {
