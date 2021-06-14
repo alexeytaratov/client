@@ -15,8 +15,8 @@ const filterRes = (res = [], str = '') => {
 const search = async (data, setParseResult = () => {}, str = '') => {
   try {
     console.log('data', data);
-    // await axios.post('https://alexfinder.herokuapp.com/api/search', {
-    await axios.post('http://localhost:5000/api/search', {
+    await axios.post('https://alexfinder.herokuapp.com/api/search', {
+    // await axios.post('http://localhost:5000/api/search', {
       data: {...data},
       headers: {'Content-Type': 'application/json; charset=UTF-8'}
     })

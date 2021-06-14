@@ -17,8 +17,8 @@ const MainPage = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        // await axios.get('https://alexfinder.herokuapp.com/api/requests', {
-        await axios.get('/api/requests', {
+        await axios.get('https://alexfinder.herokuapp.com/api/requests', {
+        // await axios.get('/api/requests', {
         // await axios.get('http://localhost:5000/api/requests', {
           headers: { 'Content-Type': 'application/json' }
         })
